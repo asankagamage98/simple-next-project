@@ -3,9 +3,11 @@
 
 import React, { useState } from 'react'
 import { useRouter } from "next/navigation";
-
+import { useDispatch } from 'react-redux';
+import { setUser } from './redux/features/Auth/loginSlice';
 
 export default function Home() {
+  const dispatch = useDispatch();
   const router = useRouter();
 
   const registerbtn = ()=>{
@@ -45,7 +47,11 @@ const submit = async (e) => {
     if (response.ok) {
       const data = await response.json();
       alert('Success!');
-      console.log(data);
+      // console.log(data);
+      dispatch(setUser(data.user)); 
+
+      // dispatch(setUser(data)); //set data for redux
+      router.push("/home");
 
     } else {
       throw new Error('Network response was not ok');

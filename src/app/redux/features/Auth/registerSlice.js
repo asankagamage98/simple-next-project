@@ -17,7 +17,7 @@ const initialState = {
 
     }
 });
-export const { addCartItem} =
+export const { userRegister} =
 registerSlice.actions;
 
 export default registerSlice.reducer;
