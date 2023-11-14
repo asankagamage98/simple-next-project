@@ -21,7 +21,7 @@ function NavbarMain() {
       console.log('User data cleared.');
   
       // Navigate to the home page
-      await router.push('/');
+      // await router.push('/');
       console.log('Redirected to the home page.');
     } catch (error) {
       console.error('Logout error:', error);

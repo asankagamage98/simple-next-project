@@ -50,6 +50,7 @@ const [form, setForm] = useState({
     if (response.ok) {
       const data = await response.json();
       alert('Success!');
+      router.push('/');
       console.log(data);
     } else {
       throw new Error('Network response was not ok');
@@ -88,11 +89,9 @@ const [form, setForm] = useState({
 //       console.error('Error:', error);
 //     }
 //   };
-  
-
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-between p-20">
+    <div className="flex min-h-screen flex-col items-center justify-between p-16">
     <div className='mx-auto max-w-xs'>
      <form action="" onSubmit={submit}>
         <div className='w-full font-bold text-2xl text-center'><p className=''>SIGN UP</p></div>
