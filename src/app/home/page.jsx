@@ -14,9 +14,9 @@ function page() {
         console.log('User Details:', user);
     
         // Redirect to the home page when the component is mounted
-        if (!user) {
-          router.push('/');
-        }
+        // if (!user) {
+        //   router.push('/');
+        // }
        
       }, [user, router]); 
     
